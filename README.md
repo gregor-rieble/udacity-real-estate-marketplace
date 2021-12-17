@@ -18,6 +18,13 @@ This project was made for the Udacity blockchain developer nanodegree program. I
 4. Execute tests: `npm run test`
 5. [Optional] Mint tokens: `npm run mint`
 
+## Contract ABI
+
+The ABI for the SolnSquareVerifier token contract can be found here:
+[SolnSquareVerifier.json](eth-contracts/SolnSquareVerifier.json)
+
+> Note: Note that the actual ABI interface is nested inside the root object of the provided JSON called `abi`
+
 ## Rinkeby
 
 The SolnSquareVerifier has been deployed on the Rinkeby test network. The contract address is
