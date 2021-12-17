@@ -1,0 +1,5 @@
+.secret
+.infuraKey
+.contract.json
+build
+node_modules

@@ -1,0 +1,29 @@
+{
+  "name": "capstone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server",
+    "zokrates": "docker run --rm --name zokrates -v %CD%/zokrates/code:/home/zokrates/code -ti zokrates/zokrates:0.4.10 /bin/bash",
+    "ganache": "ganache-cli",
+    "migrate": "cd eth-contracts && truffle migrate --reset",
+    "test ERC721Mintable": "cd eth-contracts && truffle test test/TestERC721Mintable.js",
+    "test SquareVerifier": "cd eth-contracts && truffle test test/TestSquareVerifier.js",
+    "test SolnSquareVerifier": "cd eth-contracts && truffle test test/TestSolnSquareVerifier.js",
+    "mint": "cd eth-contracts && node mint.js",
+    "test": "npm run \"test ERC721Mintable\" && npm run \"test SquareVerifier\" && npm run \"test SolnSquareVerifier\""
+  },
+  "keywords": [],
+  "author": "pk <pkrasam@gmail.com> (https://ipfs.infura.io/ipfs/QmSXiR9Khm3yo1J67nUopvVBxFJ8YGN2fUGZ34Etr3m92x/)",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "2.4.0"
+  },
+  "dependencies": {
+    "openzeppelin-solidity": "^2.2.0",
+    "solc": "^0.5.2",
+    "solc-js": "^0.5.2",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
